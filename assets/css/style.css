@@ -1,0 +1,21 @@
+h1, h2, p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  text-decoration: underline;
+}
+
+body {
+  margin: 0 auto;
+  width: 1000px;
+  background: #cccccc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
