@@ -3,11 +3,13 @@ var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l
 var wins = 0;
 var losses = 0;
 var guesses = 9;
+var guessesArray = [];
+var guessesArrayObject 
 
 var winsNumber = document.getElementById("wins-number");
 var lossesNumber = document.getElementById("losses-number");
 var guessesNumber = document.getElementById("guesses-number");
-var guessesText = document.getElementById("guesses-text");
+var guessesArrayObject = document.getElementById("guesses-text");
 
 document.onkeyup = function(event) {
 
@@ -19,20 +21,26 @@ document.onkeyup = function(event) {
 
       if (userGuess === computerGuess) {
         wins++;
+        guesses = 9;
+        guessesArray = []
       } 
 
       else {
-        guesses--
+        guesses--;
+        guessesArray.push(userGuess);
+        console.log(guessesArray)
       }
-    }
 
-  if (guesses === 0) {
-    losses++
-  }
+      if (guesses === 0) {
+        losses++;
+        guesses = 9;
+        guessesArray = [];
+      }
 
   winsNumber.textContent = wins;
   lossesNumber.textContent = losses;
   guessesNumber.textContent = guesses;
-  
-};
+  guessesArrayObject.textContent = guessesArray;
+}
 
+};
