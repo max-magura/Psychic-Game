@@ -1,4 +1,4 @@
-# Max's Pyschic Game
+# Max's Psychic Game
 
 This is a game I made to help teach me some of the fundamentals of Javascript.
 
