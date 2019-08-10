@@ -13,7 +13,7 @@ var guessesArrayObject = document.getElementById("guesses-text");
 
 document.onkeyup = function(event) {
 
-  var userGuess = event.key;
+  var userGuess = event.key.toLocaleLowerCase;
 
   var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
